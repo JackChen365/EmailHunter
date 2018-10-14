@@ -1,0 +1,63 @@
+<html>
+    <header>
+            <link rel="stylesheet" href="css/material.min.css">
+            <link rel="stylesheet" href="css/base.css">
+            <script src="js/jquery.min.js"></script>
+            <script src="js/material.min.js"></script>
+    </header>
+    <body>
+        <div class="hunter-head">
+            <img src="image/find_in_page.png" /><span>Hunter</span>   
+        </div>
+        <div class="hunter-title">
+            <div ><span>Hunt Result List:</span>
+                <div id="result-count">#</div>
+                <div id="hunter-title-spinner" class="hunter-title-spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+            </div>
+        </div>
+        <div clsss="hunter-result-list">
+            <table class="hunter-result-table mdl-data-table">
+                    <thead>
+                        <tr>
+                        <th style="width: 100%;" class="mdl-data-table__cell--non-numeric">Item</th>
+                        <th style="text-align:center">Source</th>
+                        <th >View</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hunter-result-body">
+                    </tbody>
+                    </table>
+        </div>
+        <div class="hunter-url-list">
+            <div class="hunter-title">
+                <span>Url List:</span>
+                <div id="url-request-info">#</div>
+                <div id="hunter-request-spinner" class="hunter-title-spinner mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+            </div>
+                <table class="hunter-url-table mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                            <th style="width: 100%;" class="mdl-data-table__cell--non-numeric">Url</th>
+                            <th >State</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hunter-url-body">
+                        </tbody>
+                        </table>
+        </div>
+        <div class="hunter-footer">
+                <div id="hunter-button-more" class="hunter-button">
+                        <a class=" mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                More
+                        </a>
+                </div>
+                <div id="hunter-button-copy" class="hunter-button">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Copy
+                        </a>
+                </div>
+                <a id="action-button-copy" style="display:none;"></a>
+        </div>
+        <script src="js/base_hunter.js"></script>
+    </body>
+</html>

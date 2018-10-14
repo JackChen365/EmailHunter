@@ -1,0 +1,216 @@
+body {
+    min-width:480px;
+    max-width:480px;
+}
+.hunter-head {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.hunter-head span{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.hunter-result-list{
+    width: 100%;
+    height: 32%;
+}
+.hunter-result-table{
+    width: 100%;
+    height: 32%;
+    overflow-y: scroll; 
+    overflow:auto;
+    display:inline-block;
+    box-sizing: border-box;
+}
+.mdl-data-table th {
+    position: relative;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    height: 24px;
+    font-size: 12px;
+    padding: 0px;
+    color: rgba(0,0,0,.54);
+    box-sizing: border-box;
+}
+
+.mdl-data-table th {
+    padding: 0px;
+    text-align: right;
+}
+
+.mdl-data-table tbody tr {
+    position: relative;
+    height:24px;
+    transition-duration: .28s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: background-color;
+}
+
+.mdl-data-table td {
+    position: relative;
+    height: auto;
+    border-top: 1px solid rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 0px 0px;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.mdl-data-table td, .mdl-data-table td .mdl-data-table__select {
+    vertical-align: middle;
+    width: 100%;
+    text-align: left;
+}
+
+.hunter-result-table-sub {
+    background-color:#EFEFEF;
+    text-align: left;
+    padding-left: 36px;
+}
+
+
+.hunter-url-table{
+    width: 100%;
+    height: 36%;
+    overflow-y: scroll; 
+    overflow:auto;
+    display:inline-block;
+    box-sizing: border-box;
+}
+.hunter-title{
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    color:black;
+    font-weight: bold;
+    white-space: nowrap ;
+    background-color: #EFEFEF;
+    font-family: Microsoft YaHei;
+}
+
+.hunter-footer{
+    border-top: 1px solid #d9d9d9;
+    background: #fff;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.hunter-button{
+    margin-right: 24px;
+    float:right;
+}
+
+.hunter-title-spinner{
+    width:16px;
+    height:16px;
+    float:right;
+    margin-right: 16px;
+}
+.hunter-title span {
+    float: left;
+    display: block;
+    width:auto;
+    white-space: nowrap ;
+}
+.hunter-title #result-count {
+    display: inline-block;
+    width: auto;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space: nowrap ;
+    text-overflow: ellipsis;
+}
+.hunter-title #url-request-info {
+    display: inline-block;
+    width: 80%;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space: nowrap ;
+    text-overflow: ellipsis;
+}
+.hunter-request-spinner{
+    width:16px;
+    height:16px;
+    float:right;
+    margin-right: 16px;
+}
+
+.mdl-spinner:not(.is-upgraded).is-active:after {
+    content: "Loading...";
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+/* Spinner rotation */
+@-webkit-keyframes spin { to { -webkit-transform: rotate(1080deg); transform: rotate(1080deg) } }
+@keyframes spin { to { -webkit-transform: rotate(1080deg); transform: rotate(1080deg) } }
+
+.spinner {
+  color:#E74430;
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 .1875em;
+    will-change: transform;
+    -webkit-animation: spin 2666ms linear infinite;
+            animation: spin 2666ms linear infinite;
+    -webkit-clip-path: circle(.875em at center);
+            clip-path: circle(.875em at center);
+
+    /* Set background to same color as pseudo elements. Defaults to white */
+    background-color: #fff;
+}
+/* sizes */
+.spinner[data-options*="small"] { font-size: 1em }
+.spinner[data-options*="large"] { font-size: 2em }
+.spinner::before,
+.spinner::after {
+    content: "";
+    position: absolute;
+    width: 7em;
+    height: 1.75em;
+    background-color: inherit;
+}
+
+@-webkit-keyframes shape-shift-before { to { -webkit-transform: skewX(-45deg) translate(.875em, -.875em); transform: skewX(-45deg) translate(.875em, -.875em) } }
+
+@keyframes shape-shift-before { to { -webkit-transform: skewX(-45deg) translate(.875em, -.875em); transform: skewX(-45deg) translate(.875em, -.875em) } }
+
+.spinner::before {
+    -webkit-transform: skewX(80deg) translate(.875em, -.875em);
+        -ms-transform: skewX(80deg) translate(.875em, -.875em);
+            transform: skewX(80deg) translate(.875em, -.875em);
+    -webkit-animation: shape-shift-before 1066.4ms cubic-bezier(.4, 0, .2, 1) infinite alternate;
+            animation: shape-shift-before 1066.4ms cubic-bezier(.4, 0, .2, 1) infinite alternate;
+}
+
+@-webkit-keyframes shape-shift-after { to { -webkit-transform: skewX(45deg) translate(.875em, .875em); transform: skewX(45deg) translate(.875em, .875em) } }
+
+@keyframes shape-shift-after { to { -webkit-transform: skewX(45deg) translate(.875em, .875em); transform: skewX(45deg) translate(.875em, .875em) } }
+
+.spinner::after {
+    -webkit-transform: skewX(-80deg) translate(.875em, .875em);
+        -ms-transform: skewX(-80deg) translate(.875em, .875em);
+            transform: skewX(-80deg) translate(.875em, .875em);
+    -webkit-animation: shape-shift-after 1066.4ms cubic-bezier(.4, 0, .2, 1) infinite alternate;
+            animation: shape-shift-after 1066.4ms cubic-bezier(.4, 0, .2, 1) infinite alternate;
+}
